@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            padding: 10px;
+        }
+        #btn{
+            cursor: pointer;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>assim que chama corretamente o addEventListener no botão</h1>
+
+    <input  id="ipt" placeholder="escreva.."/>
+    <button id="btn">click</button>
+    
+    <script>
+        let ipt=document.getElementById('ipt')
+        let btn=document.getElementById('btn')
+
+        focus(ipt)
+
+        btn.addEventListener('click',(e)=>{
+            e.preventDefault()
+            alert(ipt.value)
+            limpar()
+        })
+
+        function limpar(){
+            ipt.value=''
+        }
+
+        function focus(e){
+            e.focus()
+        }
+    </script>
+</body>
+</html>
